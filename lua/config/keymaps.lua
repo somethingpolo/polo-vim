@@ -4,5 +4,13 @@
 
 local map = LazyVim.safe_keymap_set
 
+-- out of need
+map("n", "<leader>rr", "*#:%s//")
+
+map("n", "<CR>", "o<Esc>", { desc = "add empty new line under" })
+map("n", "<S-CR>", "O<Esc>", { desc = "add empty new line above" })
+map("n", "<leader>zz", ":lua require('neogen').generate()<CR>")
 map({ "i", "v" }, "jk", "<Esc>", { desc = "return to normal mode" })
-map("n", "<leader>r", ":lua vim.ui.open(vim.fn.expand('%'))<CR>")
+
+-- terminal
+map("t", "<C-\\><C-\\>", "<C-\\><C-n>", { desc = "exit typing mode in terminal" })
