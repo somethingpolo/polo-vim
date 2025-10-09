@@ -8,7 +8,6 @@ local map = LazyVim.safe_keymap_set
 map("n", "<leader>rr", "*#:%s//")
 
 map("n", "<CR>", "o<Esc>", { desc = "add empty new line under" })
-map("n", "<S-CR>", "O<Esc>", { desc = "add empty new line above" })
 map("n", "<leader>zz", ":lua require('neogen').generate()<CR>")
 map({ "i", "v" }, "jk", "<Esc>", { desc = "return to normal mode" })
 
